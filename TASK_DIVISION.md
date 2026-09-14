@@ -21,25 +21,6 @@ Ibrahim leads setup, coordination, integration, and the final build review. Ever
 6. **Irene, task 43:** Connect form submission to the add-member function agreed with Rwigenza. **Rwigenza, tasks 44–46:** Connect updated array rendering and typed remove callback to the dashboard/card. **Josiane, task 47:** Add status-toggle behavior with Rwigenza and Evander. **Rwigenza, tasks 48–49:** Add status filtering and controlled name search; both filters should work together.
 7. **Ibrahim, task 50:** Integrate all contributions and verify the complete application with the team, including the production build and manual checks.
 
-## Shared contracts
-
-Agree these types before the state/form work begins (Rwigenza owns the shared interface):
-
-```ts
-interface Member {
-  id: string;
-  name: string;
-  role: string;
-  tasksCompleted: number;
-  isActive: boolean;
-  bio?: string;
-}
-// Suggested callbacks: onAdd(name: string), onRemove(id: string), onToggle(id: string).
-// Suggested filter: 'all' | 'active' | 'inactive'.
-```
-
-These are proposed contracts, not completed exercise answers. Keep the hook instance in the dashboard so all components share one members state. Use stable IDs for keys/removal, trim and reject empty submitted names, and keep score values nonnegative.
-
 ## Authorship and coordination
 
 Each member has a primary file containing their name. The initial headers designate the intended author; they do not establish that the student has implemented the tasks. A member must make their own commits with their own GitHub account.
