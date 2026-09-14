@@ -1,5 +1,7 @@
 # Coding Party — React + TypeScript
 
+**Public repository:** https://github.com/DphenomenalALU/coding-party
+
 A shared group exercise led by **Ibrahim Salami**. Six members will build one team dashboard through 50 tasks.
 
 - [Task division and dependencies](TASK_DIVISION.md)

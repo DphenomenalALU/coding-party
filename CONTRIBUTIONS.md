@@ -2,7 +2,7 @@
 
 Planning/setup does not imply exercise completion. Each member fills in their own section as they push work.
 
-## Ibrahim Salami (@Dphenomenal101)
+## Ibrahim Salami (@DphenomenalALU)
 
 - Assigned tasks: 1–9, 50
 - Completed tasks: pending

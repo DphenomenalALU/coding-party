@@ -4,14 +4,14 @@ Ibrahim leads setup, coordination, integration, and the final build review. Ever
 
 | Member | GitHub | Tasks | Primary authored file | Responsibility |
 | --- | --- | --- | --- | --- |
-| Ibrahim Salami **(lead)** | @Dphenomenal101 | 1–9, 50 | `src/TeamDashboard.tsx` | Project setup, typed dashboard, App integration, final verification |
+| Ibrahim Salami **(lead)** | @DphenomenalALU | 1–9, 50 | `src/TeamDashboard.tsx` | Project setup, typed dashboard, App integration, final verification |
 | Evander Manna | @evand3rr | 10–20 | `src/MemberCard.tsx` | Reusable member cards, typed props, defaults, optional values, initial member list |
 | Sonia Etuhoko | @soniaetuhoko | 21–30 | `src/MemberCard.css` | Card styling, conditional classes, typed inline style, responsive dashboard layout |
 | Josiane MUKESHIMANA | @Josiane705 | 31–35, 47 | `src/hooks/useTeamScore.ts` | Typed score state and updates; active/inactive toggle integration |
 | Irene Winnie | @Winnie-Irene | 36–40, 43 | `src/AddMemberForm.tsx` | Controlled name input, typed events and form submission, adding a member |
 | Rwigenza Niyoyandemye | @Rwigenzadavy | 41–42, 44–46, 48–49 | `src/hooks/useMembers.ts` | Member interface and array state, rendering, remove callback, status filter and search |
 
-Ibrahim's GitHub account is `Dphenomenal101` (confirmed in GitHub Desktop).
+Ibrahim's GitHub account is `DphenomenalALU` (confirmed from the published repository owner).
 
 ## Work order and handoffs
 
