@@ -3,7 +3,7 @@
 // Scope: Member interface and array state, rendering, remove callback, status filter and search
 // Starter placeholder prepared during repository setup; no exercise implementation yet.
 // The assigned member should implement, verify, commit, and push their own work.
-
+// Contributor: Josiane MUKESHIMANA — task 47: toggle member active/inactive status
 import { useState } from 'react';
 import type { Member } from '../types/member';
 
@@ -42,5 +42,17 @@ export function useMembers() {
         setMembers((prevMembers) => prevMembers.filter((member) => member.id !== memberId));
     }
 
-    return { members, addMember, removeMember };
+    function toggleStatus(memberId: string) {
+        setMembers((prevMembers) =>
+            prevMembers.map((member) =>
+                member.id === memberId
+                    ? { ...member, isActive: !member.isActive }
+                    : member
+            )
+        );
+    }
+
+    return { members, addMember, removeMember, toggleStatus };
 }
+
+    
