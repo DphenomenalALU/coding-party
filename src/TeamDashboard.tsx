@@ -15,6 +15,8 @@ export default function TeamDashboard(): ReactElement {
   const { teamScore, increaseScore, decreaseScore } = useTeamScore();
   const {
     members,
+    filter,
+    searchTerm,
     addMember,
     removeMember,
     toggleStatus,
@@ -52,17 +54,30 @@ export default function TeamDashboard(): ReactElement {
         <input
           id="member-search"
           type="search"
+          value={searchTerm}
           placeholder="Search by name"
           onChange={(event) => setSearchTerm(event.target.value)}
         />
         <div className="button-row" aria-label="Filter member status">
-          <button type="button" onClick={() => setFilterType('all')}>
+          <button
+            type="button"
+            aria-pressed={filter === 'all'}
+            onClick={() => setFilterType('all')}
+          >
             All
           </button>
-          <button type="button" onClick={() => setFilterType('active')}>
+          <button
+            type="button"
+            aria-pressed={filter === 'active'}
+            onClick={() => setFilterType('active')}
+          >
             Active
           </button>
-          <button type="button" onClick={() => setFilterType('inactive')}>
+          <button
+            type="button"
+            aria-pressed={filter === 'inactive'}
+            onClick={() => setFilterType('inactive')}
+          >
             Inactive
           </button>
         </div>

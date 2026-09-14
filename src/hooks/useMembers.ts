@@ -92,6 +92,8 @@ export function useMembers() {
 
   return {
     members: filteredMembers,
+    filter,
+    searchTerm: search,
     addMember,
     removeMember,
     toggleStatus,

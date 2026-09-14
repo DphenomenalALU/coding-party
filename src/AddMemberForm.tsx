@@ -10,6 +10,7 @@ interface AddMemberFormProps {
 
 function AddMemberForm({ onAddMember }: AddMemberFormProps): ReactElement {
   const [newMemberName, setNewMemberName] = useState("")
+  const [submittedName, setSubmittedName] = useState("")
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setNewMemberName(event.target.value)
@@ -26,6 +27,7 @@ function AddMemberForm({ onAddMember }: AddMemberFormProps): ReactElement {
       isActive: true,
     }
     onAddMember(newMember)
+    setSubmittedName(newMember.name)
     setNewMemberName("")
   }
 
@@ -43,6 +45,9 @@ function AddMemberForm({ onAddMember }: AddMemberFormProps): ReactElement {
         />
         <button type="submit">Add</button>
       </form>
+      {submittedName && (
+        <p aria-live="polite">Added member: {submittedName}</p>
+      )}
     </div>
   )
 }
