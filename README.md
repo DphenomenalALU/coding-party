@@ -2,15 +2,11 @@
 
 **Public repository:** https://github.com/DphenomenalALU/coding-party
 
-A shared group exercise led by **Ibrahim Salami**. Six members will build one team dashboard through 50 tasks.
-
 - [Task division and dependencies](TASK_DIVISION.md)
 - [Contribution workflow and authorship](CONTRIBUTING.md)
 - [Individual contribution log](CONTRIBUTIONS.md)
 
 **Current status:** planning and author-labelled starter files only. The 50-task application has not been implemented. Ibrahim starts by setting up Vite; each member then implements and pushes their own work incrementally.
-
-The original attached development guide is reproduced below unchanged.
 
 ---
 
