@@ -1,9 +1,13 @@
 // Author: Irene Winnie
 import { useState } from "react"
+import type { Member } from "./types/member"
 
-function AddMemberForm() {
+interface AddMemberFormProps {
+  onAddMember: (member: Member) => void
+}
+
+function AddMemberForm({ onAddMember }: AddMemberFormProps) {
   const [newMemberName, setNewMemberName] = useState("")
-  const [submittedName, setSubmittedName] = useState("")
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setNewMemberName(event.target.value)
@@ -11,7 +15,15 @@ function AddMemberForm() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    setSubmittedName(newMemberName)
+    if (newMemberName.trim() === "") return
+    const newMember: Member = {
+      id: Date.now().toString(),
+      name: newMemberName.trim(),
+      role: "New Member",
+      tasksCompleted: 0,
+      isActive: true,
+    }
+    onAddMember(newMember)
     setNewMemberName("")
   }
 
@@ -27,7 +39,6 @@ function AddMemberForm() {
         />
         <button type="submit">Add</button>
       </form>
-      {submittedName && <p>Last submitted: {submittedName}</p>}
     </div>
   )
 }
