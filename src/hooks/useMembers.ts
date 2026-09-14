@@ -33,6 +33,14 @@ const initialMembers: Member[] = [
 
 export function useMembers() {
     const [members, setMembers] = useState<Member[]>(initialMembers);
-    
-    return { members };
+
+    function addMember(newMember: Member) {
+        setMembers((prevMembers) => [...prevMembers, newMember]);
+    }
+
+    function removeMember(memberId: string) {
+        setMembers((prevMembers) => prevMembers.filter((member) => member.id !== memberId));
+    }
+
+    return { members, addMember, removeMember };
 }
