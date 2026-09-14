@@ -11,8 +11,6 @@ Ibrahim leads setup, coordination, integration, and the final build review. Ever
 | Irene Winnie | @Winnie-Irene | 36–40, 43 | `src/AddMemberForm.tsx` | Controlled name input, typed events and form submission, adding a member |
 | Rwigenza Niyoyandemye | @Rwigenzadavy | 41–42, 44–46, 48–49 | `src/hooks/useMembers.ts` | Member interface and array state, rendering, remove callback, status filter and search |
 
-Ibrahim's GitHub account is `DphenomenalALU` (confirmed from the published repository owner).
-
 ## Work order and handoffs
 
 1. **Ibrahim, tasks 1–9:** Generate a Vite React + TypeScript starter in a temporary sibling directory and copy its setup into this repository, preserving this README, plans, `.gitignore`, and member files. Install dependencies, clean the starter, create the dashboard, and connect it to `App.tsx`. Run the dev server and verify it in a browser. Commit and push this foundation.
