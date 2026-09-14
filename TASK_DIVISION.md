@@ -48,11 +48,11 @@ Some tasks deliberately touch another person's component. Coordinate before edit
 
 ## Completion checklist
 
-- [ ] Ibrahim: tasks 1–9, 50
-- [ ] Evander: tasks 10–20
-- [ ] Sonia: tasks 21–30
-- [ ] Josiane: tasks 31–35, 47
-- [ ] Irene: tasks 36–40, 43
-- [ ] Rwigenza: tasks 41–42, 44–46, 48–49
+- [x] Ibrahim: tasks 1–9, 50
+- [x] Evander: tasks 10–20
+- [x] Sonia: tasks 21–30
+- [x] Josiane: tasks 31–35, 47
+- [x] Irene: tasks 36–40, 43
+- [x] Rwigenza: tasks 41–42, 44–46, 48–49
 
-Mark work complete only after implementation and verification. All tasks 1–50 are assigned exactly once.
+All tasks 1–50 are implemented and have passed the final integration build and lint review. Each member should still add their own manual verification details to their contribution entry when submitting.

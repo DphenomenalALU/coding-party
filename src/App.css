@@ -2,6 +2,7 @@
  * Author: Sonia Etuhoko
  * Assigned tasks: 28–30
  * Scope: General application / dashboard layout (kept separate from MemberCard.css)
+ * Contributor: Ibrahim Salami — task 50 final integration controls and responsive polish
  */
 
 /* Task 28: page-level styles live here, not in MemberCard.css */
@@ -36,6 +37,100 @@ body {
   color: #4a5d73;
 }
 
+.dashboard-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.score-panel,
+.add-member-panel,
+.member-controls {
+  padding: 1rem 1.25rem;
+  border: 1px solid #c5d0dc;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 78%);
+  box-sizing: border-box;
+}
+
+.score-panel h2,
+.add-member-panel h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.score-panel p {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #245c8d;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #527da5;
+  border-radius: 6px;
+  background: #2f6d9f;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  background: #245c8d;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #f2b84b;
+  outline-offset: 2px;
+}
+
+.add-member-panel form,
+.member-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.add-member-panel input,
+.member-controls input {
+  min-width: 12rem;
+  flex: 1;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #9aabba;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a2b3c;
+  font: inherit;
+}
+
+.member-controls {
+  margin-bottom: 1.25rem;
+}
+
+.member-controls label {
+  font-weight: 600;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px dashed #9aabba;
+  border-radius: 8px;
+  text-align: center;
+  color: #4a5d73;
+}
+
 /* Task 30: grid layout for member cards */
 .member-grid {
   display: grid;
@@ -62,5 +157,19 @@ body {
 
   .member-grid {
     grid-template-columns: 1fr;
+  }
+
+  .dashboard-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .member-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .member-controls input {
+    min-width: 0;
+    width: 100%;
   }
 }

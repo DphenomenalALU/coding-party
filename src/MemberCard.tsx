@@ -4,6 +4,7 @@
 // Contributor: Sonia Etuhoko — task 21: import MemberCard.css
 
 import "./MemberCard.css";
+import type { ReactElement } from "react";
 
 interface MemberCardProps {
   name: string;
@@ -23,7 +24,7 @@ function MemberCard({
   bio,
   onRemove,
   onToggleStatus,
-}: MemberCardProps): JSX.Element {
+}: MemberCardProps): ReactElement {
   // Task III.6 — dynamic class based on isActive
   const statusClass = isActive ? "member-card--active" : "member-card--inactive";
 
@@ -42,10 +43,10 @@ function MemberCard({
       {bio && <p className="member-card__bio">{bio}</p>}
 
       <div className="member-card__actions">
-        <button onClick={onToggleStatus}>
+        <button type="button" onClick={onToggleStatus}>
           Mark {isActive ? "Inactive" : "Active"}
         </button>
-        <button onClick={onRemove}>Remove</button>
+        <button type="button" onClick={onRemove}>Remove</button>
       </div>
     </div>
   );

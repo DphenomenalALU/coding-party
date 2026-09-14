@@ -3,6 +3,7 @@
 // Contributor: Josiane MUKESHIMANA — task 32: display teamScore and score buttons.
 // Contributor: Sonia Etuhoko — tasks 29–30: dashboard layout classes
 // Contributor: Rwigenza Davy — tasks 45–46: connect useMember to TeamDashboard and render Member and pass remove callback to MemberCard.
+// Contributor: Ibrahim Salami — task 50: final integration, accessibility, and review.
 
 import type { ReactElement } from 'react';
 import { useTeamScore } from './hooks/useTeamScore';
@@ -12,8 +13,15 @@ import AddMemberForm from './AddMemberForm';
 
 export default function TeamDashboard(): ReactElement {
   const { teamScore, increaseScore, decreaseScore } = useTeamScore();
-  const { members, addMember, removeMember , toggleStatus, setFilterType, setSearchTerm } = useMembers();
-  
+  const {
+    members,
+    addMember,
+    removeMember,
+    toggleStatus,
+    setFilterType,
+    setSearchTerm,
+  } = useMembers();
+
   return (
     <main className="team-dashboard">
       <h1>Coding Party — Team Dashboard</h1>
@@ -22,38 +30,61 @@ export default function TeamDashboard(): ReactElement {
         dashboard. Our group application will bring together member profiles,
         team progress, and interactive tools as we complete the coding tasks.
       </p>
-      <p>Team score: {teamScore}</p>            
-      <button onClick={increaseScore}>+1</button>  
-      <button onClick={decreaseScore}>-1</button>
+      <section className="dashboard-toolbar" aria-label="Team controls">
+        <div className="score-panel">
+          <h2>Team score</h2>
+          <p aria-live="polite">{teamScore}</p>
+          <div className="button-row">
+            <button type="button" onClick={increaseScore}>
+              Increase score
+            </button>
+            <button type="button" onClick={decreaseScore}>
+              Decrease score
+            </button>
+          </div>
+        </div>
 
-      <input
-      type="text"
-      placeholder="Search members"
-      onChange={(e) => setSearchTerm(e.target.value)}
-      />
-
-
-      <div>
-        <button onClick={() => setFilterType('all')}>All</button>
-        <button onClick={() => setFilterType('active')}>Active</button>
-        <button onClick={() => setFilterType('inactive')}>Inactive</button>
-      </div>
-
-      <div className="member-grid">
-        {
-          members.map((member) => (
-  <MemberCard
-    key={member.id}
-    name={member.name}
-    role={member.role}
-    tasksCompleted={member.tasksCompleted}
-    isActive={member.isActive}
-    bio={member.bio}
-    onRemove={() => removeMember(member.id)}
-    onToggleStatus={() => toggleStatus(member.id)}
-  />
-))}
         <AddMemberForm onAddMember={addMember} />
+      </section>
+
+      <section className="member-controls" aria-label="Member filters">
+        <label htmlFor="member-search">Search members</label>
+        <input
+          id="member-search"
+          type="search"
+          placeholder="Search by name"
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
+        <div className="button-row" aria-label="Filter member status">
+          <button type="button" onClick={() => setFilterType('all')}>
+            All
+          </button>
+          <button type="button" onClick={() => setFilterType('active')}>
+            Active
+          </button>
+          <button type="button" onClick={() => setFilterType('inactive')}>
+            Inactive
+          </button>
+        </div>
+      </section>
+
+      <div className="member-grid" aria-live="polite">
+        {members.length > 0 ? (
+          members.map((member) => (
+            <MemberCard
+              key={member.id}
+              name={member.name}
+              role={member.role}
+              tasksCompleted={member.tasksCompleted}
+              isActive={member.isActive}
+              bio={member.bio}
+              onRemove={() => removeMember(member.id)}
+              onToggleStatus={() => toggleStatus(member.id)}
+            />
+          ))
+        ) : (
+          <p className="empty-state">No members match the current filters.</p>
+        )}
       </div>
     </main>
   );
