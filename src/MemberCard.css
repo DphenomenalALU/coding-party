@@ -2,6 +2,109 @@
  * Author: Sonia Etuhoko
  * Assigned tasks: 21–30
  * Scope: Card styling, conditional classes, typed inline style, responsive dashboard layout
- * Starter placeholder prepared during repository setup; no exercise implementation yet.
- * The assigned member should implement, verify, commit, and push their own work.
  */
+
+/* Tasks 23–24: selectors + padding, border, spacing, background */
+.member-card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #c5d0dc;
+  background-color: #f7f9fc;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.member-card__name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a2b3c;
+}
+
+.member-card__role {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a5d73;
+}
+
+.member-card__tasks {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #2f3e4d;
+}
+
+.member-card__status {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.member-card__bio {
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #3d4f63;
+}
+
+.member-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.member-card__actions button {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #8a9bb0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a2b3c;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.member-card__actions button:hover {
+  background-color: #eef3f8;
+}
+
+/* Task 26: active vs inactive */
+.member-card--active {
+  border-color: #2f7d4a;
+  background-color: #eef8f1;
+}
+
+.member-card--active .member-card__status {
+  color: #1f6b3a;
+}
+
+.member-card--inactive {
+  border-color: #a0a8b0;
+  background-color: #eceff2;
+  opacity: 0.92;
+}
+
+.member-card--inactive .member-card__status {
+  color: #5c6670;
+}
+
+/* Task 29: smaller screens */
+@media (max-width: 600px) {
+  .member-card {
+    padding: 1rem;
+  }
+
+  .member-card__name {
+    font-size: 1.1rem;
+  }
+
+  .member-card__actions {
+    flex-direction: column;
+  }
+
+  .member-card__actions button {
+    width: 100%;
+  }
+}

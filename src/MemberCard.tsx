@@ -1,6 +1,9 @@
 // Author: Evander Manna
 // Assigned tasks: 10–20
 // Scope: Reusable member cards, typed props, defaults, optional values, initial member list
+// Contributor: Sonia Etuhoko — task 21: import MemberCard.css
+
+import "./MemberCard.css";
 
 interface MemberCardProps {
   name: string;
