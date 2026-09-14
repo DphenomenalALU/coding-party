@@ -5,6 +5,7 @@
 - [Task division and dependencies](TASK_DIVISION.md)
 - [Contribution workflow and authorship](CONTRIBUTING.md)
 - [Individual contribution log](CONTRIBUTIONS.md)
+- [Rubric evidence checklist](RUBRIC_CHECKLIST.md)
 
 **Current status:** All 50 tasks are implemented in the shared dashboard and verified with the production build and lint checks. Individual commit history and authorship comments identify each member's work.
 

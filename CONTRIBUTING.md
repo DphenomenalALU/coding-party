@@ -38,7 +38,7 @@ Adjust filenames and messages to your actual work. Commit/push working milestone
 // Tasks: 10–20
 ```
 
-For shared edits, retain original authors and add a scoped contributor comment. CSS uses `/* Author: Sonia Etuhoko */`. Starter headers identify assignments only; implemented code and genuine commit history demonstrate cgit pull --rebase origin mainontributions.
+For shared edits, retain original authors and add a scoped contributor comment. CSS uses `/* Author: Sonia Etuhoko */`. Starter headers identify assignments only; implemented code and genuine commit history demonstrate contributions.
 
 Keep `node_modules`, `dist`, local environment files and secrets out of Git. Commit the generated package lockfile so everyone can use `npm ci`.
 
