@@ -4,6 +4,8 @@
  * Scope: Card styling, conditional classes, typed inline style, responsive dashboard layout
  */
 
+/* Standard feat commit note for tasks 21-30 */
+
 /* Tasks 23–24: selectors + padding, border, spacing, background */
 .member-card {
   padding: 1.25rem 1.5rem;
