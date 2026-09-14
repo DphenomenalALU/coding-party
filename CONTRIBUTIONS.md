@@ -7,7 +7,7 @@ Planning/setup does not imply exercise completion. Each member fills in their ow
 - Assigned tasks: 1–9, 50
 - Completed tasks: 1–9, 50
 - Files changed: `package.json`, `index.html`, `src/main.tsx`, `src/App.tsx`, `src/TeamDashboard.tsx`, `src/hooks/useMembers.ts`, `src/types/member.ts`, `src/MemberCard.tsx`, `src/AddMemberForm.tsx`, `src/App.css`, `README.md`
-- Commit links/hashes: `ac9477d`, `68b586a`, `f2e35a7`, `4293911`
+- Commit links/hashes: `ac9477d`, `68b586a`, `f2e35a7`, `4293911`, `7d4489f`, `371d639`
 - Verification performed: `npm run build`, `npm run lint`, and browser smoke check
 - Identity note: earlier Ibrahim commits use the local Git identity `Dphenomenal101`; later commits and the repository owner use `DphenomenalALU`.
 
