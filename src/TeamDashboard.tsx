@@ -2,7 +2,7 @@
 // Tasks 4–5, 8–9: typed dashboard component with multiple JSX elements.
 // Contributor: Josiane MUKESHIMANA — task 32: display teamScore and score buttons.
 // Contributor: Sonia Etuhoko — tasks 29–30: dashboard layout classes
-// Contributor: Rwigenza Davy — tasks 45–46: connect useMember to TeamDashboard and render Member and pass remove callback to MemberCard.
+// Contributor: Rwigenza Niyoyandemye — tasks 45–46: connect useMembers to TeamDashboard and pass remove callbacks to MemberCard.
 // Contributor: Ibrahim Salami — task 50: final integration, accessibility, and review.
 
 import type { ReactElement } from 'react';

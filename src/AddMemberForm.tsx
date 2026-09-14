@@ -8,6 +8,13 @@ interface AddMemberFormProps {
   onAddMember: (member: Member) => void
 }
 
+function createMemberId(): string {
+  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
+    return crypto.randomUUID()
+  }
+  return `member-${Date.now()}-${Math.random().toString(36).slice(2)}`
+}
+
 function AddMemberForm({ onAddMember }: AddMemberFormProps): ReactElement {
   const [newMemberName, setNewMemberName] = useState("")
   const [submittedName, setSubmittedName] = useState("")
@@ -20,7 +27,7 @@ function AddMemberForm({ onAddMember }: AddMemberFormProps): ReactElement {
     event.preventDefault()
     if (newMemberName.trim() === "") return
     const newMember: Member = {
-      id: Date.now().toString(),
+      id: createMemberId(),
       name: newMemberName.trim(),
       role: "New Member",
       tasksCompleted: 0,
