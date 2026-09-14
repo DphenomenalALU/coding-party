@@ -25,7 +25,7 @@ git pull --rebase origin main
 git add src/MemberCard.tsx
 # Stage any other files you actually changed, including your contribution-log entry.
 git commit -m "feat: add typed member card props (tasks 11-14)"
-git pull --rebase origin main
+
 git push origin main
 ```
 
@@ -47,3 +47,4 @@ Keep `node_modules`, `dist`, local environment files and secrets out of Git. Com
 Run `npm run build` after implementation. Check member props/defaults, responsive cards, score increments and zero floor, form submission, adding/removing/toggling members, and combined filtering/search. Record only checks you actually performed.
 
 Update your own section of `CONTRIBUTIONS.md` with tasks, files, real commit links/hashes and verification. Submit the public repository URL on Canvas, and in your individual submission comment state which tasks you completed or significantly contributed to.
+git pull --rebase origin main
