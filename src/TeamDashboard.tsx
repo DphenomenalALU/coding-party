@@ -1,7 +1,16 @@
 // Author: Ibrahim Salami
-// Assigned tasks: 1–9, 50
-// Scope: Project setup, typed dashboard, App integration, final verification
-// Starter placeholder prepared during repository setup; no exercise implementation yet.
-// The assigned member should implement, verify, commit, and push their own work.
+// Tasks 4–5, 8–9: typed dashboard component with multiple JSX elements.
+import type { ReactElement } from 'react';
 
-export {};
+export default function TeamDashboard(): ReactElement {
+  return (
+    <main>
+      <h1>Coding Party — Team Dashboard</h1>
+      <p>
+        We are a team of six learning React and TypeScript by building a shared
+        dashboard. Our group application will bring together member profiles,
+        team progress, and interactive tools as we complete the coding tasks.
+      </p>
+    </main>
+  );
+}
