@@ -6,7 +6,20 @@
 - [Contribution workflow and authorship](CONTRIBUTING.md)
 - [Individual contribution log](CONTRIBUTIONS.md)
 
-**Current status:** planning and author-labelled starter files only. The 50-task application has not been implemented. Ibrahim starts by setting up Vite; each member then implements and pushes their own work incrementally.
+**Current status:** Ibrahim has set up a clean Vite React + TypeScript application (tasks 1–3). Team feature tasks are in progress.
+
+## Run locally
+
+Use Node.js 22.6 or a newer supported LTS release. This project uses Vite 6 for compatibility with the setup environment.
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite. To check types and create a production build, run `npm run build`. Run `npm run lint` for ESLint checks.
+
+Authorship is recorded with `// Author: Ibrahim Salami` in JavaScript/TypeScript and TypeScript configuration files. HTML uses its supported comment syntax; `package.json` uses an `author` field because JSON does not support comments.
 
 ---
 

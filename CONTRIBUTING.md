@@ -6,14 +6,14 @@ Use this one shared public repository. Ibrahim should add the other five GitHub 
 
 Clone the shared repository using its actual GitHub URL. Use your own Git identity, with an email connected to your own GitHub account. Do not use another student's name/email for commits.
 
-After Ibrahim pushes the Vite setup:
+Install the committed dependencies and start the app:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The setup is currently pending; those commands work after `package.json` and the lockfile are added.
+The Vite setup and package lockfile are committed. Use the local URL printed by Vite.
 
 ## Commit as you complete work
 

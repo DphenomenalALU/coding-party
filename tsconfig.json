@@ -1,0 +1,9 @@
+// Author: Ibrahim Salami
+// Task 1: TypeScript configuration from the official Vite template.
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
