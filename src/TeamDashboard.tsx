@@ -12,7 +12,7 @@ import AddMemberForm from './AddMemberForm';
 
 export default function TeamDashboard(): ReactElement {
   const { teamScore, increaseScore, decreaseScore } = useTeamScore();
-  const { members, addMember, removeMember } = useMembers();
+  const { members, addMember, removeMember , toggleStatus } = useMembers();
   
   return (
     <main className="team-dashboard">
@@ -36,7 +36,7 @@ export default function TeamDashboard(): ReactElement {
     isActive={member.isActive}
     bio={member.bio}
     onRemove={() => removeMember(member.id)}
-    onToggleStatus={() => {}}
+    onToggleStatus={() => toggleStatus(member.id)}
   />
 ))}
         <AddMemberForm onAddMember={addMember} />
