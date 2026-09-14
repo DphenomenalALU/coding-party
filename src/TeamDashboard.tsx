@@ -12,7 +12,7 @@ import AddMemberForm from './AddMemberForm';
 
 export default function TeamDashboard(): ReactElement {
   const { teamScore, increaseScore, decreaseScore } = useTeamScore();
-  const { members, addMember, removeMember , toggleStatus } = useMembers();
+  const { members, addMember, removeMember , toggleStatus, setFilterType } = useMembers();
   
   return (
     <main className="team-dashboard">
@@ -25,6 +25,13 @@ export default function TeamDashboard(): ReactElement {
       <p>Team score: {teamScore}</p>            
       <button onClick={increaseScore}>+1</button>  
       <button onClick={decreaseScore}>-1</button>
+      
+      <div>
+        <button onClick={() => setFilterType('all')}>All</button>
+        <button onClick={() => setFilterType('active')}>Active</button>
+        <button onClick={() => setFilterType('inactive')}>Inactive</button>
+      </div>
+
       <div className="member-grid">
         {
           members.map((member) => (

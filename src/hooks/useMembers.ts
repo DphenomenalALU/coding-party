@@ -31,9 +31,21 @@ const initialMembers: Member[] = [
   },
 ];
 
-export function useMembers() {
-    const [members, setMembers] = useState<Member[]>(initialMembers);
+type FilterType = 'all' | 'active' | 'inactive';
 
+export function useMembers() {
+
+    const [members, setMembers] = useState<Member[]>(initialMembers);
+    const [filter, setFilter] = useState<FilterType>('all');
+
+    const filteredMembers = members.filter((member) => {
+        if (filter === 'active')
+            return member.isActive;
+        if (filter === 'inactive')
+            return !member.isActive;
+        return true;
+    });
+    
     function addMember(newMember: Member) {
         setMembers((prevMembers) => [...prevMembers, newMember]);
     }
@@ -52,7 +64,9 @@ export function useMembers() {
         );
     }
 
-    return { members, addMember, removeMember, toggleStatus };
-}
+    function setFilterType(newFilter: FilterType) {
+        setFilter(newFilter);
+    }
+        return { members: filteredMembers, addMember, removeMember, toggleStatus, setFilterType};
 
-    
+}
