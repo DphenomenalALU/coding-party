@@ -27,7 +27,7 @@ const initialMembers: Member[] = [
     name: 'Irene Winnie',
     role: 'Form and interaction developer',
     tasksCompleted: 5,
-    isActive: true,
+    isActive: false,
   },
   {
     id: 'sonia-etuhoko',
