@@ -6,6 +6,7 @@
 - [Contribution workflow and authorship](CONTRIBUTING.md)
 - [Individual contribution log](CONTRIBUTIONS.md)
 - [Rubric evidence checklist](RUBRIC_CHECKLIST.md)
+- [Canvas comment templates](CANVAS_SUBMISSION_COMMENTS.md)
 
 **Current status:** All 50 tasks are implemented in the shared dashboard and verified with the production build and lint checks. Individual commit history and authorship comments identify each member's work.
 
