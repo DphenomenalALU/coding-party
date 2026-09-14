@@ -1,7 +1,15 @@
 // Author: Irene Winnie
-// Assigned tasks: 36–40, 43
-// Scope: Controlled name input, typed events and form submission, adding a member
-// Starter placeholder prepared during repository setup; no exercise implementation yet.
-// The assigned member should implement, verify, commit, and push their own work.
+import { useState } from "react"
 
-export {};
+function AddMemberForm() {
+  const [newMemberName, setNewMemberName] = useState("")
+
+  return (
+    <div>
+      <h3>Add a New Member</h3>
+      <p>Name entered: {newMemberName}</p>
+    </div>
+  )
+}
+
+export default AddMemberForm
