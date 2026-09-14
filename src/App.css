@@ -1,0 +1,66 @@
+/*
+ * Author: Sonia Etuhoko
+ * Assigned tasks: 28–30
+ * Scope: General application / dashboard layout (kept separate from MemberCard.css)
+ */
+
+/* Task 28: page-level styles live here, not in MemberCard.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  background: linear-gradient(160deg, #dfe8f2 0%, #f4f7fb 45%, #e8eef5 100%);
+  color: #1a2b3c;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.team-dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  box-sizing: border-box;
+}
+
+.team-dashboard h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.team-dashboard > p {
+  margin: 0 0 1.5rem;
+  max-width: 40rem;
+  line-height: 1.5;
+  color: #4a5d73;
+}
+
+/* Task 30: grid layout for member cards */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+/* Task 29: responsive dashboard */
+@media (max-width: 900px) {
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-dashboard {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .team-dashboard h1 {
+    font-size: 1.4rem;
+  }
+
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+}
