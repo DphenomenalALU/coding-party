@@ -37,13 +37,16 @@ export function useMembers() {
 
     const [members, setMembers] = useState<Member[]>(initialMembers);
     const [filter, setFilter] = useState<FilterType>('all');
+    const [search, setSearch] = useState('');
+
 
     const filteredMembers = members.filter((member) => {
-        if (filter === 'active')
-            return member.isActive;
-        if (filter === 'inactive')
-            return !member.isActive;
-        return true;
+      const matchesFilter = 
+        filter === 'active' ? member.isActive : 
+        filter === 'inactive' ? !member.isActive : true;
+
+      const matchesSearch = member.name.toLowerCase().includes(search.toLowerCase());
+      return matchesFilter && matchesSearch;
     });
     
     function addMember(newMember: Member) {
@@ -67,6 +70,10 @@ export function useMembers() {
     function setFilterType(newFilter: FilterType) {
         setFilter(newFilter);
     }
-        return { members: filteredMembers, addMember, removeMember, toggleStatus, setFilterType};
+
+    function setSearchTerm(newSearch: string) {
+        setSearch(newSearch);
+    }
+        return { members: filteredMembers, addMember, removeMember, toggleStatus, setFilterType, setSearchTerm };
 
 }
