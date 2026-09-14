@@ -1,8 +1,13 @@
 // Author: Ibrahim Salami
 // Tasks 4–5, 8–9: typed dashboard component with multiple JSX elements.
+// Author: Josiane MUKESHIMANA 
+// Tasks(Task 31) :added teamScore state 
 import type { ReactElement } from 'react';
+import { useState } from 'react';
 
 export default function TeamDashboard(): ReactElement {
+  const [teamScore, setTeamScore] = useState<number>(0);
+
   return (
     <main>
       <h1>Coding Party — Team Dashboard</h1>
