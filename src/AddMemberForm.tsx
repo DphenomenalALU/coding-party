@@ -1,8 +1,9 @@
 // Author: Irene Winnie
+// Contributor: Ibrahim Salami — omit the unused setter so the shared TypeScript build passes.
 import { useState } from "react"
 
 function AddMemberForm() {
-  const [newMemberName, setNewMemberName] = useState("")
+  const [newMemberName] = useState("")
 
   return (
     <div>
